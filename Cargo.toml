@@ -3,7 +3,7 @@ name = "ce-cache"
 version = "0.1.0"
 edition = "2024"
 description = "Distributed content-addressed CI/build cache over CE — a Bazel/sccache/Turborepo-style remote cache backed by CE blobs, where content-addressing IS the integrity proof (a returned object whose CID != the requested key is rejected, so cache poisoning is structurally impossible). An application built ON CE primitives, not part of the node."
-license = "MIT"
+license = "AGPL-3.0-only"
 repository = "https://github.com/ce-net/ce-cache"
 keywords = ["ce", "build-cache", "bazel", "sccache", "content-addressed"]
 categories = ["command-line-utilities", "development-tools", "network-programming"]
