@@ -22,10 +22,10 @@ path = "src/main.rs"
 [dependencies]
 # The CE SDK: blobs/objects (put_blob/get_blob/put_object/get_object, content-addressed + CID-verified),
 # mesh request/reply, discovery, atlas/history. Depended on by path for the MVP per the build plan.
-ce-rs = { path = "../ce-rs" }
+ce-rs = { git = "https://github.com/ce-net/ce-rs" }
 # The capability verifier primitive — the host loop authorizes a signed attenuating chain before
 # serving or accepting a cache entry (`cache:read` / `cache:write`).
-ce-cap = { path = "../ce/crates/ce-cap" }
+ce-iam-core = { git = "https://github.com/ce-net/ce-iam" }
 
 tokio = { version = "1", features = ["macros", "rt-multi-thread", "time", "net"] }
 anyhow = "1"
@@ -45,4 +45,4 @@ axum = "0.7"
 
 [dev-dependencies]
 # Tests forge capability chains and stand up a tiny in-process mock node to exercise put/get/has.
-ce-identity = { path = "../ce/crates/ce-identity" }
+ce-identity = { git = "https://github.com/ce-net/ce" }

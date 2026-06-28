@@ -19,7 +19,7 @@ use std::path::{Path, PathBuf};
 use std::time::Duration;
 
 use anyhow::{Context, Result, anyhow};
-use ce_cap::{SignedCapability, authorize, decode_chain};
+use ce_iam_core::{SignedCapability, authorize, decode_chain};
 use ce_rs::CeClient;
 
 use crate::index::Index;
